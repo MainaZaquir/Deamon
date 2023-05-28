@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
- name: ssd-monitor
+ name: Monitor
 spec:
  selector:
    matchLabels:
-     app: ssd-monitor
+     app: Monitor
  template:
    metadata:
      labels:
-       app: ssd-monitor
+       app: Monitor
    spec:
      nodeSelector:
        moringa: ssd
      containers:
      - name: main
-       image: figent/ssd-monitor
+       image: figent/Monitor
